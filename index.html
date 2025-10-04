@@ -117,7 +117,7 @@
 
     function hitungTotal() {
       var produk = document.getElementById("produk").value;
-      var jumlah = document.getElementById("jumlah").value) | | 0;
+      var jumlah = parsInt(document.getElementById("jumlah").value) | | 0;
       var total = 0;
 
       if (produk && jumlah) {
@@ -131,7 +131,7 @@
       var nama = document.getElementById("nama").value;
       var alamat = document.getElementById("alamat").value;
       var produk = document.getElementById("produk").value;
-      var jumlah = document.getElementById("jumlah").value) | | 0;
+      var jumlah = paseInt(document.getElementById("jumlah").value) | | 0;
       var total = hargaProduk[produk] * jumlah;
 
       if(nama && alamat && produk && jumlah) {
