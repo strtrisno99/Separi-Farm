@@ -49,14 +49,14 @@
     <section class="products" id="produk">
       <h2>Produk Kami</h2>
       <div class="product-list">
-        <div class="card"><img src="https://via.placeholder.com/250x150?text=Ayam+Pedaging"><h3>Ayam KUB Pedaging</h3><p>Rp 75.000/ekor</p></div>
-        <div class="card"><img src="https://via.placeholder.com/250x150?text=Bibit+Ayam"><h3>Bibit Ayam KUB</h3><p>Rp 45.000/ekor</p></div>
-        <div class="card"><img src="https://via.placeholder.com/250x150?text=DOC"><h3>DOC Ayam KUB</h3><p>Rp 10.000/ekor</p></div>
-        <div class="card"><img src="https://via.placeholder.com/250x150?text=Telur"><h3>Telur Ayam KUB</h3><p>Rp 7.000/butir</p></div>
-        <div class="card"><img src="https://via.placeholder.com/250x150?text=Ayam+Betina"><h3>Ayam KUB Betina</h3><p>Rp 150.000/ekor</p></div>
-        <div class="card"><img src="https://via.placeholder.com/250x150?text=Ayam+Jantan"><h3>Ayam KUB Jantan</h3><p>Rp 175.000/ekor</p></div>
-        <div class="card"><img src="https://via.placeholder.com/250x150?text=Pakan"><h3>Pakan Fermentasi</h3><p>Rp 50.000/5kg</p></div>
-        <div class="card"><img src="https://via.placeholder.com/250x150?text=Olahan"><h3>Produk Olahan</h3><p>Rp 45.000/pack</p></div>
+        <div class="card"><img src="https://via.placeholder.com/250x150?text=Ayam+Pedaging"><h3>Ayam KUB Pedaging</h3><p>Rp 70.000/ekor</p></div>
+        <div class="card"><img src="https://via.placeholder.com/250x150?text=Bibit+Ayam"><h3>Bibit Ayam KUB</h3><p>Rp 50.000/ekor</p></div>
+        <div class="card"><img src="https://via.placeholder.com/250x150?text=DOC"><h3>DOC Ayam KUB</h3><p>Rp 8.000/ekor</p></div>
+        <div class="card"><img src="https://via.placeholder.com/250x150?text=Telur"><h3>Telur Ayam KUB</h3><p>Rp 2.000/butir</p></div>
+        <div class="card"><img src="https://via.placeholder.com/250x150?text=Ayam+Betina"><h3>Ayam KUB Betina</h3><p>Rp 65.000/ekor</p></div>
+        <div class="card"><img src="https://via.placeholder.com/250x150?text=Ayam+Jantan"><h3>Ayam KUB Jantan</h3><p>Rp 75.000/ekor</p></div>
+        <div class="card"><img src="https://via.placeholder.com/250x150?text=Pakan"><h3>Pakan Fermentasi</h3><p>Rp 25.000/5kg</p></div>
+        <div class="card"><img src="https://via.placeholder.com/250x150?text=Olahan"><h3>Produk Olahan</h3><p>Rp 40.000/pack</p></div>
       </div>
     </section>
 
@@ -70,14 +70,14 @@
         <label for="produk">Pilih Produk:</label>
         <select id="produk" required onchange="hitungTotal()">
           <option value="">--Pilih Produk--</option>
-          <option value="Ayam KUB Pedaging">Ayam KUB Pedaging - Rp 75.000</option>
-          <option value="Bibit Ayam KUB">Bibit Ayam KUB - Rp 45.000</option>
-          <option value="DOC Ayam KUB">DOC Ayam KUB - Rp 10.000</option>
-          <option value="Telur Ayam KUB">Telur Ayam KUB - Rp 7.000</option>
-          <option value="Ayam KUB Betina">Ayam KUB Betina - Rp 150.000</option>
-          <option value="Ayam KUB Jantan">Ayam KUB Jantan - Rp 175.000</option>
-          <option value="Pakan Fermentasi">Pakan Fermentasi - Rp 50.000</option>
-          <option value="Produk Olahan">Produk Olahan - Rp 45.000</option>
+          <option value="Ayam KUB Pedaging">Ayam KUB Pedaging - Rp 70.000</option>
+          <option value="Bibit Ayam KUB">Bibit Ayam KUB - Rp 50.000</option>
+          <option value="DOC Ayam KUB">DOC Ayam KUB - Rp 8.000</option>
+          <option value="Telur Ayam KUB">Telur Ayam KUB - Rp 2.000</option>
+          <option value="Ayam KUB Betina">Ayam KUB Betina - Rp 65.000</option>
+          <option value="Ayam KUB Jantan">Ayam KUB Jantan - Rp 75.000</option>
+          <option value="Pakan Fermentasi">Pakan Fermentasi - Rp 25.000</option>
+          <option value="Produk Olahan">Produk Olahan - Rp 40.000</option>
         </select>
         <label for="jumlah">Jumlah:</label>
         <input type="number" id="jumlah" min="1" required oninput="hitungTotal()">
@@ -94,7 +94,7 @@
     <section class="contact" id="kontak">
       <h2>Kontak Kami</h2>
       <p>📍 Lokasi: Samarinda, Kalimantan Timur</p>
-      <p>📞 WA/Telp: 0822-4009-1668</p>
+      <p>📞 WA/Telp: 0812-3456-7890</p>
       <p>📧 Email: separifarm@gmail.com</p>
     </section>
   </div>
@@ -105,33 +105,33 @@
 
   <script>
     const hargaProduk = {
-      "Ayam KUB Pedaging": 75000,
-      "Bibit Ayam KUB": 45000,
-      "DOC Ayam KUB": 10000,
-      "Telur Ayam KUB": 7000,
-      "Ayam KUB Betina": 150000,
-      "Ayam KUB Jantan": 175000,
-      "Pakan Fermentasi": 40000,
+      "Ayam KUB Pedaging": 70000,
+      "Bibit Ayam KUB": 50000,
+      "DOC Ayam KUB": 8000,
+      "Telur Ayam KUB": 2000,
+      "Ayam KUB Betina": 65000,
+      "Ayam KUB Jantan": 75000,
+      "Pakan Fermentasi": 25000,
       "Produk Olahan": 40000
     };
 
     function hitungTotal() {
       var produk = document.getElementById("produk").value;
-      var jumlah = parsInt(document.getElementById("jumlah").value) | | 0;
+      var jumlah = document.getElementById("jumlah").value;
       var total = 0;
 
       if (produk && jumlah) {
         total = hargaProduk[produk] * jumlah;
       }
 
-      document.getElementById("totalHarga").innerText = "Total: Rp " + total.toLocaleString("id-ID");
+      document.getElementById("totalHarga").innerText = "Total: Rp " + total.toLocaleString();
     }
 
     function kirimWA() {
       var nama = document.getElementById("nama").value;
       var alamat = document.getElementById("alamat").value;
       var produk = document.getElementById("produk").value;
-      var jumlah = paseInt(document.getElementById("jumlah").value) | | 0;
+      var jumlah = document.getElementById("jumlah").value;
       var total = hargaProduk[produk] * jumlah;
 
       if(nama && alamat && produk && jumlah) {
@@ -140,8 +140,8 @@
                     "Alamat: " + alamat + "%0A" +
                     "Produk: " + produk + "%0A" +
                     "Jumlah: " + jumlah + "%0A" +
-                    "Total: Rp " + total.toLocaleString("id-ID");
-        window.open("https://wa.me/6282240091668?text=" + pesan, "_blank");
+                    "Total: Rp " + total.toLocaleString();
+        window.open("https://wa.me/6281234567890?text=" + pesan, "_blank");
       } else {
         alert("Harap lengkapi semua field!");
       }
