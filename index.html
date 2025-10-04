@@ -1,1 +1,151 @@
-<!DOCTYPE html><html><head><title>Separi Farm</title></head><body><h1>Separi Farm Website</h1></body></html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Separi Farm - Ayam KUB Berkualitas</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; }
+    header { background: #198754; color: #fff; padding: 20px 0; text-align: center; }
+    nav { background: #145c3f; text-align: center; padding: 10px 0; }
+    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    .container { width: 90%; margin: auto; padding: 20px 0; }
+    .hero { text-align: center; padding: 30px; background: #e9f5ee; border-radius: 10px; }
+    .products, .about, .contact, .order { margin-top: 40px; }
+    .products h2, .about h2, .contact h2, .order h2 { color: #145c3f; text-align: center; margin-bottom: 20px; }
+    .product-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 15px; text-align: center; }
+    .card img { max-width: 100%; border-radius: 10px; }
+    form { max-width: 500px; margin: auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    form label { display: block; margin: 10px 0 5px; font-weight: bold; }
+    form input, form select, form textarea { width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; }
+    form button { background: #198754; color: #fff; padding: 10px; border: none; border-radius: 5px; cursor: pointer; }
+    form button:hover { background: #145c3f; }
+    .total { font-weight: bold; color: #d63384; margin: 10px 0; }
+    footer { text-align: center; background: #198754; color: #fff; padding: 15px; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Separi Farm</h1>
+    <p>Peternakan Ayam KUB - Sehat, Lezat, dan Berkualitas</p>
+  </header>
+
+  <nav>
+    <a href="#beranda">Beranda</a>
+    <a href="#produk">Produk</a>
+    <a href="#pesan">Pesan</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <div class="container">
+    <section class="hero" id="beranda">
+      <h2>Selamat Datang di Separi Farm</h2>
+      <p>Kami menyediakan ayam KUB (Kampung Unggul Balitbangtan) dengan kualitas terbaik untuk konsumsi maupun bibit.</p>
+    </section>
+
+    <section class="products" id="produk">
+      <h2>Produk Kami</h2>
+      <div class="product-list">
+        <div class="card"><img src="https://via.placeholder.com/250x150?text=Ayam+Pedaging"><h3>Ayam KUB Pedaging</h3><p>Rp 70.000/ekor</p></div>
+        <div class="card"><img src="https://via.placeholder.com/250x150?text=Bibit+Ayam"><h3>Bibit Ayam KUB</h3><p>Rp 50.000/ekor</p></div>
+        <div class="card"><img src="https://via.placeholder.com/250x150?text=DOC"><h3>DOC Ayam KUB</h3><p>Rp 8.000/ekor</p></div>
+        <div class="card"><img src="https://via.placeholder.com/250x150?text=Telur"><h3>Telur Ayam KUB</h3><p>Rp 2.000/butir</p></div>
+        <div class="card"><img src="https://via.placeholder.com/250x150?text=Ayam+Betina"><h3>Ayam KUB Betina</h3><p>Rp 65.000/ekor</p></div>
+        <div class="card"><img src="https://via.placeholder.com/250x150?text=Ayam+Jantan"><h3>Ayam KUB Jantan</h3><p>Rp 75.000/ekor</p></div>
+        <div class="card"><img src="https://via.placeholder.com/250x150?text=Pakan"><h3>Pakan Fermentasi</h3><p>Rp 25.000/5kg</p></div>
+        <div class="card"><img src="https://via.placeholder.com/250x150?text=Olahan"><h3>Produk Olahan</h3><p>Rp 40.000/pack</p></div>
+      </div>
+    </section>
+
+    <section class="order" id="pesan">
+      <h2>Form Pemesanan</h2>
+      <form id="orderForm">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" required>
+        <label for="alamat">Alamat:</label>
+        <textarea id="alamat" required></textarea>
+        <label for="produk">Pilih Produk:</label>
+        <select id="produk" required onchange="hitungTotal()">
+          <option value="">--Pilih Produk--</option>
+          <option value="Ayam KUB Pedaging">Ayam KUB Pedaging - Rp 70.000</option>
+          <option value="Bibit Ayam KUB">Bibit Ayam KUB - Rp 50.000</option>
+          <option value="DOC Ayam KUB">DOC Ayam KUB - Rp 8.000</option>
+          <option value="Telur Ayam KUB">Telur Ayam KUB - Rp 2.000</option>
+          <option value="Ayam KUB Betina">Ayam KUB Betina - Rp 65.000</option>
+          <option value="Ayam KUB Jantan">Ayam KUB Jantan - Rp 75.000</option>
+          <option value="Pakan Fermentasi">Pakan Fermentasi - Rp 25.000</option>
+          <option value="Produk Olahan">Produk Olahan - Rp 40.000</option>
+        </select>
+        <label for="jumlah">Jumlah:</label>
+        <input type="number" id="jumlah" min="1" required oninput="hitungTotal()">
+        <p class="total" id="totalHarga">Total: Rp 0</p>
+        <button type="button" onclick="kirimWA()">Pesan Sekarang</button>
+      </form>
+    </section>
+
+    <section class="about" id="tentang">
+      <h2>Tentang Kami</h2>
+      <p>Separi Farm adalah peternakan ayam KUB yang berlokasi di Samarinda. Kami berkomitmen menyediakan ayam sehat dan berkualitas tinggi dengan metode pemeliharaan alami.</p>
+    </section>
+
+    <section class="contact" id="kontak">
+      <h2>Kontak Kami</h2>
+      <p>📍 Lokasi: Samarinda, Kalimantan Timur</p>
+      <p>📞 WA/Telp: 0812-3456-7890</p>
+      <p>📧 Email: separifarm@gmail.com</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Separi Farm | Semua Hak Dilindungi</p>
+  </footer>
+
+  <script>
+    const hargaProduk = {
+      "Ayam KUB Pedaging": 70000,
+      "Bibit Ayam KUB": 50000,
+      "DOC Ayam KUB": 8000,
+      "Telur Ayam KUB": 2000,
+      "Ayam KUB Betina": 65000,
+      "Ayam KUB Jantan": 75000,
+      "Pakan Fermentasi": 25000,
+      "Produk Olahan": 40000
+    };
+
+    function hitungTotal() {
+      var produk = document.getElementById("produk").value;
+      var jumlah = document.getElementById("jumlah").value;
+      var total = 0;
+
+      if (produk && jumlah) {
+        total = hargaProduk[produk] * jumlah;
+      }
+
+      document.getElementById("totalHarga").innerText = "Total: Rp " + total.toLocaleString();
+    }
+
+    function kirimWA() {
+      var nama = document.getElementById("nama").value;
+      var alamat = document.getElementById("alamat").value;
+      var produk = document.getElementById("produk").value;
+      var jumlah = document.getElementById("jumlah").value;
+      var total = hargaProduk[produk] * jumlah;
+
+      if(nama && alamat && produk && jumlah) {
+        var pesan = "Halo, saya mau pesan:%0A" +
+                    "Nama: " + nama + "%0A" +
+                    "Alamat: " + alamat + "%0A" +
+                    "Produk: " + produk + "%0A" +
+                    "Jumlah: " + jumlah + "%0A" +
+                    "Total: Rp " + total.toLocaleString();
+        window.open("https://wa.me/6281234567890?text=" + pesan, "_blank");
+      } else {
+        alert("Harap lengkapi semua field!");
+      }
+    }
+  </script>
+</body>
+</html>
