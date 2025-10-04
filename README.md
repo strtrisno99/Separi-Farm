@@ -6,8 +6,7 @@ Dibuat sederhana agar mudah diakses semua kalangan, dan sudah terintegrasi denga
 ---
 
 ## 🚀 Demo Website
-🔗 [Kunjungi Website](https://username.github.io/separi-farm/)  
-*(ganti `username` dengan akun GitHub kamu)*
+🔗 [Kunjungi Website](https://strtrisno99.github.io/separi-farm/)  
 
 ---
 
@@ -28,20 +27,6 @@ separi-farm/
 └── README.md    # Dokumentasi proyek
 ```
 
----
-
-## ⚙️ Cara Deploy di GitHub Pages
-1. Buat repository baru di GitHub (misalnya: `separi-farm`)  
-2. Upload `index.html` ke repo  
-3. Masuk ke **Settings → Pages**  
-4. Pilih:
-   - Source: **Deploy from a branch**
-   - Branch: `main` → `/ (root)`
-5. Simpan → tunggu 1-2 menit  
-6. Website akan aktif di:
-   ```
-   https://username.github.io/separi-farm/
-   ```
 
 ---
 
