@@ -117,21 +117,21 @@
 
     function hitungTotal() {
       var produk = document.getElementById("produk").value;
-      var jumlah = document.getElementById("jumlah").value;
+      var jumlah = document.getElementById("jumlah").value) | | 0;
       var total = 0;
 
       if (produk && jumlah) {
         total = hargaProduk[produk] * jumlah;
       }
 
-      document.getElementById("totalHarga").innerText = "Total: Rp " + total.toLocaleString();
+      document.getElementById("totalHarga").innerText = "Total: Rp " + total.toLocaleString("id-ID");
     }
 
     function kirimWA() {
       var nama = document.getElementById("nama").value;
       var alamat = document.getElementById("alamat").value;
       var produk = document.getElementById("produk").value;
-      var jumlah = document.getElementById("jumlah").value;
+      var jumlah = document.getElementById("jumlah").value) | | 0;
       var total = hargaProduk[produk] * jumlah;
 
       if(nama && alamat && produk && jumlah) {
@@ -140,7 +140,7 @@
                     "Alamat: " + alamat + "%0A" +
                     "Produk: " + produk + "%0A" +
                     "Jumlah: " + jumlah + "%0A" +
-                    "Total: Rp " + total.toLocaleString();
+                    "Total: Rp " + total.toLocaleString("id-ID");
         window.open("https://wa.me/6282240091668?text=" + pesan, "_blank");
       } else {
         alert("Harap lengkapi semua field!");
