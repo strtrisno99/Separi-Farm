@@ -22,7 +22,7 @@
     form input, form select, form textarea { width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; }
     form button { background: #198754; color: #fff; padding: 10px; border: none; border-radius: 5px; cursor: pointer; }
     form button:hover { background: #145c3f; }
-    .total { font-weight: bold; color: #d63384; margin: 10px 0; }
+    .total { font-weight: bold; color: #d63384; margin: 10px 0; text-align:center; }
     footer { text-align: center; background: #198754; color: #fff; padding: 15px; margin-top: 40px; }
   </style>
 </head>
@@ -62,7 +62,7 @@
 
     <section class="order" id="pesan">
       <h2>Form Pemesanan</h2>
-      <form id="orderForm">
+      <form id="orderForm" onsubmit="return false;">
         <label for="nama">Nama:</label>
         <input type="text" id="nama" required>
         <label for="alamat">Alamat:</label>
@@ -116,35 +116,40 @@
     };
 
     function hitungTotal() {
-      var produk = document.getElementById("produk").value;
-      var jumlah = document.getElementById("jumlah").value;
-      var total = 0;
-
-      if (produk && jumlah) {
-        total = hargaProduk[produk] * jumlah;
+      const produk = document.getElementById("produk").value;
+      const jumlah = Number(document.getElementById("jumlah").value);
+      const totalElem = document.getElementById("totalHarga");
+      
+      if (produk && jumlah > 0) {
+        const total = hargaProduk[produk] * jumlah;
+        totalElem.textContent = "Total: Rp " + total.toLocaleString("id-ID");
+      } else {
+        totalElem.textContent = "Total: Rp 0";
       }
-
-      document.getElementById("totalHarga").innerText = "Total: Rp " + total.toLocaleString();
     }
 
     function kirimWA() {
-      var nama = document.getElementById("nama").value;
-      var alamat = document.getElementById("alamat").value;
-      var produk = document.getElementById("produk").value;
-      var jumlah = document.getElementById("jumlah").value;
-      var total = hargaProduk[produk] * jumlah;
+      const nama = document.getElementById("nama").value.trim();
+      const alamat = document.getElementById("alamat").value.trim();
+      const produk = document.getElementById("produk").value;
+      const jumlah = Number(document.getElementById("jumlah").value);
+      const noWa = "6281234567890"; // ubah ke nomor WA asli kamu
 
-      if(nama && alamat && produk && jumlah) {
-        var pesan = "Halo, saya mau pesan:%0A" +
-                    "Nama: " + nama + "%0A" +
-                    "Alamat: " + alamat + "%0A" +
-                    "Produk: " + produk + "%0A" +
-                    "Jumlah: " + jumlah + "%0A" +
-                    "Total: Rp " + total.toLocaleString();
-        window.open("https://wa.me/6281234567890?text=" + pesan, "_blank");
-      } else {
-        alert("Harap lengkapi semua field!");
+      if (!nama || !alamat || !produk || jumlah <= 0) {
+        alert("Harap lengkapi semua data sebelum memesan!");
+        return;
       }
+
+      const total = hargaProduk[produk] * jumlah;
+      const pesan = `Halo Separi Farm, saya ingin pesan:%0A%0A` +
+                    `👤 Nama: ${nama}%0A` +
+                    `📍 Alamat: ${alamat}%0A` +
+                    `🐔 Produk: ${produk}%0A` +
+                    `📦 Jumlah: ${jumlah}%0A` +
+                    `💰 Total: Rp ${total.toLocaleString("id-ID")}%0A%0A` +
+                    `Terima kasih.`;
+
+      window.open(`https://wa.me/${noWa}?text=${pesan}`, "_blank");
     }
   </script>
 </body>
