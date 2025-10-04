@@ -19,17 +19,6 @@ Dibuat sederhana agar mudah diakses semua kalangan, dan sudah terintegrasi denga
 
 ---
 
-## 📁 Struktur File
-```
-separi-farm/
-│
-├── index.html   # File utama website
-└── README.md    # Dokumentasi proyek
-```
-
-
----
-
 ## 📬 Kontak
 - 📍 Samarinda, Kalimantan Timur  
 - 📞 WA/Telp: 0812-3456-7890  
