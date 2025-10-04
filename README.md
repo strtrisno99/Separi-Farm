@@ -21,7 +21,7 @@ Dibuat sederhana agar mudah diakses semua kalangan, dan sudah terintegrasi denga
 
 ## 📬 Kontak
 - 📍 Samarinda, Kalimantan Timur  
-- 📞 WA/Telp: 0812-3456-7890  
+- 📞 WA/Telp: 0822-4009-1668  
 - 📧 Email: separifarm@gmail.com  
 
 ---
